@@ -8,7 +8,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.bluescreen"
+        applicationId = "com.example.bluescreen2"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
