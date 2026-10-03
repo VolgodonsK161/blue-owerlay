@@ -20,8 +20,8 @@ jobs:
         distribution: 'temurin'
 
     - name: Setup Android SDK
-      run: |
-        yes | sdkmanager --licenses
+      uses: android-actions/setup-android@v3 
+        
         sdkmanager "platforms;android-34" "build-tools;34.0.0"
 
     - name: Setup Gradle
