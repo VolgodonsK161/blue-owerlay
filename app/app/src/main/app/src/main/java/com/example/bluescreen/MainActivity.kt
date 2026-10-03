@@ -19,11 +19,11 @@ class MainActivity : Activity() {
             setContentView(textView)
             // Конец вашего кода
             
-        } catch (e: Exception) {
+        } catch ( t: Thtowable) {
             // Если произойдет ошибка, покажем её на экране
             android.app.AlertDialog.Builder(this)
                 .setTitle("ПРИЛОЖЕНИЕ ВЫЛЕТЕЛО!")
-                .setMessage(e.stackTraceToString())
+                .setMessage(t.stackTraceToString())
                 .setPositiveButton("OK", null)
                 .show()
         }
