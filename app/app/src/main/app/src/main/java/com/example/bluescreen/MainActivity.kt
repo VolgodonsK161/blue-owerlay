@@ -1,11 +1,11 @@
-package com.example.bluescreen
+package com.example.bluescreen // Внимание: проверьте, чтобы совпадало с вашим пакетом!
 
+import android.app.Activity
 import android.os.Bundle
 import android.widget.TextView
 import android.view.Gravity
-import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         
@@ -16,4 +16,4 @@ class MainActivity : AppCompatActivity() {
         
         setContentView(textView)
     }
-} 
+}
