@@ -9,11 +9,23 @@ class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         
-        val textView = TextView(this)
-        textView.text = "Ура! Приложение работает!"
-        textView.gravity = Gravity.CENTER
-        textView.textSize = 24f
-        
-        setContentView(textView)
+        try {
+            // Ваш код
+            val textView = TextView(this)
+            textView.text = "Ура! Приложение работает!"
+            textView.gravity = Gravity.CENTER
+            textView.textSize = 24f
+
+            setContentView(textView)
+            // Конец вашего кода
+            
+        } catch (e: Exception) {
+            // Если произойдет ошибка, покажем её на экране
+            android.app.AlertDialog.Builder(this)
+                .setTitle("ПРИЛОЖЕНИЕ ВЫЛЕТЕЛО!")
+                .setMessage(e.stackTraceToString())
+                .setPositiveButton("OK", null)
+                .show()
+        }
     }
 }
